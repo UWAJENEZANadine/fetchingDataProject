@@ -4,10 +4,15 @@
   background-color: #ccc;
   height: 250vh;
 }
+.App input{
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 20%;
+}
 .header{
  border-bottom: 5px solid red;
  width: 25%;
- margin-left: 35rem;
+ margin-left: 40rem;
  font-family: 'Poppins', sans-serif;
 }
 .paragraph{
@@ -22,6 +27,8 @@
   margin: 0 auto;  
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
 
 }
 
