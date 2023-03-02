@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Skeleton } from "antd";
 import "./App.css";
+import ListingComponent from "./component/listingComponent";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
 
 class App extends Component {
   constructor() {
@@ -18,7 +21,7 @@ class App extends Component {
   }
   componentDidMount() {
     console.log("didMount");
-    fetch("https://course-api.com/react-tours-project")
+    fetch("https://jsonplaceholder.ir/users")
       .then((res) => res.json())
       .then((nameList) => {
         this.setState({ users: nameList, loading: false });
@@ -30,7 +33,7 @@ class App extends Component {
   render() {
     if (this.state.loading) {
       return (
-        <div style={{ marginLeft: "3rem", paddingTop: "5rem", width: "80%" }}>
+        <div style={{paddingTop: "5rem", width: "80%" }}>
           <p
             className="paragraph"
             style={{ fontFamily: "sans-serif", fontSize: "2.8rem" }}
@@ -42,31 +45,25 @@ class App extends Component {
       );
     }
     return (
-      <div className="App">
-        <h1 className="header">List of users</h1>
-        <input
-          type="text"
-          onChange={(e) => this.setState({ filterdata: e.target.value })}
-          placeholder="search here"
-        />
-        {
-        this.state.users
-          .filter((value) => {
-            return value.name.toLowerCase().includes(this.state.filterdata);
-          })
-          .map((user) => {
-            return (
-              <div className="data-container">
-                <h1 key={user.id}>{user.name}</h1>
-                <p>{user.info}</p>
-              </div>
-            );
-          })
-          }
+      <>
+        <div>
+          <Header />
+        </div>
+        <div className="App">
+          <h1 className="header">List of users</h1>
+          <input
+            type="text"
+            onChange={(e) => this.setState({ filterdata: e.target.value })}
+            placeholder="search here"
+          />
+         
+          <ListingComponent title={this.state.users} description={this.state.filterdata} />
 
-        {/* <h1>{this.state. name}</h1> */}
-        {/* <button onClick={() => this.setState({name: "UWAJENEZA"})}>Send</button> */}
-      </div>
+          {/* <h1>{this.state. name}</h1> */}
+          {/* <button onClick={() => this.setState({name: "UWAJENEZA"})}>Send</button> */}
+        </div>
+        <Footer />
+      </>
     );
   }
 }
