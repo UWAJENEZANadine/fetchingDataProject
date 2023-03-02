@@ -7,14 +7,17 @@
 .App {
   text-align: center;
   background-color: #ccc;
-  height: 240vh;
+  height: 290vh;
   padding: 2rem;
+  
 }
 .App input{
   margin-bottom: 2rem;
   padding: 1rem;
   width: 20%;
   margin-top: 3rem;
+  margin-left: -5rem;
+  outline: none;
 }
 .header{
  border-bottom: 5px solid red;
@@ -35,6 +38,7 @@
   padding: 1rem;
   margin-bottom: 2rem;
   font-family: 'Poppins', sans-serif;
+  padding: 2rem;
 
 }
 
