@@ -1,21 +1,17 @@
 import React, { Component } from "react";
-import "../css/Header.css";
-import logo from "../img/logo.png";
+import { NavLink } from "react-router-dom";
+// import logo from "../component/img/logo.png";
+
+
 class Header extends Component {
   render() {
     return (
       <div className="navigation">
-        <div>
-          <img src={logo} />
-        </div>
-        <div>
-          <ul>
-            <li>Home</li>
-            <li>Contact us</li>
-            <li>About us</li>
-            <li>Services</li>
-          </ul>
-        </div>
+        <NavLink to='home'>Home</NavLink>
+        <NavLink to='services'>Servives</NavLink>
+        <NavLink to='about'>About us</NavLink>
+        <NavLink to='main'>Main</NavLink>
+        {/* <NavLink to='contact'>contact</NavLink> */}
       </div>
     );
   }
