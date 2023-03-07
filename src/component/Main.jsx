@@ -3,7 +3,6 @@ import { Skeleton } from "antd";
 import "./css/App.css";
 import ListingComponent from "./listingComponent";
 
-
 class Main extends Component {
   constructor() {
     super();
@@ -45,7 +44,8 @@ class Main extends Component {
     }
     return (
       <>
-       
+      
+
         <div className="App">
           <h1 className="header">List of users</h1>
           <input
@@ -62,7 +62,6 @@ class Main extends Component {
           {/* <h1>{this.state. name}</h1> */}
           {/* <button onClick={() => this.setState({name: "UWAJENEZA"})}>Send</button> */}
         </div>
-   
       </>
     );
   }
