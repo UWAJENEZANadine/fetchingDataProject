@@ -43,3 +43,26 @@
 
 }
 
+.data-1{
+  width: 100%;
+
+}
+@media (max-width: 1200px){
+  .data-all{
+    display: block;
+    
+  }
+  .headerr{
+    display: none;
+  }
+ 
+}
+
+
+@media only screen and (max-width: 768px){
+  .data-all{
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+}

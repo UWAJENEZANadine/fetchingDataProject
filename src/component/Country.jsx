@@ -1,6 +1,7 @@
 import React from "react";
-
+import { Select, Option } from "@material-tailwind/react";
 import allCountry from "../database/data.json";
+import "./css/App.css"
 import {
   Card,
   CardHeader,
@@ -12,8 +13,8 @@ import {
 } from "@material-tailwind/react";
 const Services = ({ data }) => {
   return (
-    <div class="grid grid-cols-4 gap-4 -mt-3 px-6 py-6">
-      <div>
+    <div class="data-all grid grid-cols-4 gap-4 -mt-3 px-6 py-6">
+      <div className="data-1">
         <Card className="max-w-[24rem] overflow-hidden max-h-96">
           <CardHeader
             floated={false}
@@ -40,7 +41,7 @@ const Services = ({ data }) => {
         </Card>
       </div>
 
-      <div>
+      <div className="data-2">
         <Card className="max-w-[24rem] overflow-hidden max-h-96">
           <CardHeader
             floated={false}
@@ -67,7 +68,7 @@ const Services = ({ data }) => {
           <CardFooter className="flex items-center justify-between"></CardFooter>
         </Card>
       </div>
-      <div>
+      <div className="data-3">
         <Card className="max-w-[24rem] overflow-hidden max-h-96">
           <CardHeader
             floated={false}
@@ -95,7 +96,7 @@ const Services = ({ data }) => {
         </Card>
       </div>
 
-      <div>
+      <div className="data-4">
         <Card className="max-w-[24rem] overflow-hidden max-h-96 mb-10">
           <CardHeader
             floated={false}
@@ -122,7 +123,7 @@ const Services = ({ data }) => {
           <CardFooter className="flex items-center justify-between"></CardFooter>
         </Card>
       </div>
-      <div>
+      <div className="data-5">
         <Card className="max-w-[24rem] overflow-hidden">
           <CardHeader
             floated={false}
@@ -150,7 +151,7 @@ const Services = ({ data }) => {
         </Card>
       </div>
 
-      <div>
+      <div className="data-6">
         <Card className="max-w-[24rem] overflow-hidden">
           <CardHeader
             floated={false}
@@ -177,7 +178,7 @@ const Services = ({ data }) => {
           <CardFooter className="flex items-center justify-between"></CardFooter>
         </Card>
       </div>
-      <div>
+      <div className="data-7">
         <Card className="max-w-[24rem] overflow-hidden">
           <CardHeader
             floated={false}
@@ -205,7 +206,7 @@ const Services = ({ data }) => {
         </Card>
       </div>
 
-      <div>
+      <div className="data-8">
         <Card className="max-w-[24rem] overflow-hidden">
           <CardHeader
             floated={false}
